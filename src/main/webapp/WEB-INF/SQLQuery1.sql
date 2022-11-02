@@ -13,3 +13,4 @@ role varchar(45),
 favourites varchar(45),
 avatar varchar(45),
 )
+select * from users where id=1

@@ -33,8 +33,10 @@ public class UserAction extends MappingDispatchAction {
 			HttpServletResponse response) throws Exception {
 		//String name= request.getParameter("name");
 		String name="hello";
+		User userdto = new User();
+		userdto.setName(name);
 		User user = (User) form;
-		user.setName(name);
+		user.setName(userdto.getName());
 		return mapping.findForward("viewUser");
 	}
 }
