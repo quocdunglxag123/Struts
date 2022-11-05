@@ -20,10 +20,10 @@ public class UserAction extends Action {
 		String password = request.getParameter("password");
 		
 		loginForm user = (loginForm) form;
-		
+		user.setError("");
+
 		if (customerId != null && password!=null) {
 			if (user.getCustomerId().equals("a") && user.getPassword().equals("a")) {
-				user.setError("");
 				return mapping.findForward("search");
 
 			}
