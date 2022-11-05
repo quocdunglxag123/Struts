@@ -9,12 +9,13 @@
 <title>Insert title here</title>
 </head>
 <body>
+
  <div align="center">
   <h1>Employee Register Form</h1>
-  <bean:write name="user" property="error" />
+  <bean:write name="user" property="error" filter="false"/>
   
-  <form action="/HelloWorld/T001.do" method="get">
-   <table style="with: 80%">
+  <form action="/HelloWorld/T001.do" method="post">
+	<table style="with: 80%">
     <tr>
      <td>CustomerId</td>
      <td><input type="text" name="customerId" /></td>
