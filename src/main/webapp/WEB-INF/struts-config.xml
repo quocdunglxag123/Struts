@@ -4,25 +4,14 @@
           "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
 <struts-config>
 	<form-beans>
-		<form-bean name="user" type="com.trungtamjava.model.User" />
+		<form-bean name="user" type="com.trungtamjava.form.loginForm" />
 	</form-beans>
 	
     <action-mappings>
-        <action path="/add-user" type="com.trungtamjava.action.UserAction"
-        		name="user" parameter="addUser">
-        	<forward name="addUser" path="/addUser.jsp"/>
-        		
-        </action>
-        <action path="/update-user" type="com.trungtamjava.action.UserAction"
-        		name="user" parameter="updateUser">
-        	<forward name="updateUser" path="/updateUser.jsp"/>
-        		
-        </action>
-        
-        <action path="/view-user" type="com.trungtamjava.action.UserAction"
-        		name="user" parameter="viewUser">
-        	<forward name="viewUser" path="/viewUser.jsp"/>
-        		
+        <action path="/T001" type="com.trungtamjava.action.UserAction"
+        		name="user">
+        	<forward name="search" path="/views/search.jsp"/>
+        	<forward name="login" path="/views/login.jsp"/>
         </action>
     </action-mappings>
 </struts-config>
